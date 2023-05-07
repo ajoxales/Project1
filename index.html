@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>DLSU-D Programs</title>
+    <!--Used link tag to link css-->
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <h1>DLSU-D Programs</h1>
@@ -56,7 +58,7 @@
     </details>
 
     <p><b>College of Science and Computer Studies</b></p>
-    <ul>
+    <ul >
         <li>Bachelor of Science in Biology with specialization in Medical Biology (3 year compressed program)</li>
         <li>Bachelor of Science in Biology with specialization in Medical Biology</li>
         <li>Bachelor of Science in Biology with specialization in Microbiology</li>
@@ -78,27 +80,85 @@
 
     <hr />
 
+    <!--Used type attribute 'a'-->
     <p><b>My Top 3 Program Choices in DLSU-D</b></p>
-    <ol>
+    <ol type="a">
         <li>Bachelor of Arts in Multimedia Arts</li>
         <li>Bachelor of Science in Information Technology</li>
         <li>Bachelor of Science in Computer Science</li>
     </ol>
 
+  <!--figure, figcaption -->
+  <figure>
     <a href="https://www.dlsud.edu.ph/aboutAdmissionsPortal.htm" target="_blank"
     ><img src="https://portal.dlsud.edu.ph/mydlsud/Images/login.jpg" alt="Image of Ayuntamiento Building" width="500px" ></a>
-    
+    <figcaption>Ayuntamiento Building</figcaption>
+  </figure>
+
+<!--Used iframe, video, audio tags-->
+  <p>Using iframe tag</p>
+  <iframe width="900" height="506" src="https://www.youtube.com/embed/8_f0Olg9KTI" title="DLSU D Graduation Day 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  <p>Using video tag</p>
+  <video width="900" height="506" src="C:\Users\alexo\Downloads\Video\DLSU-D_2.mp4" controls></video><br><br>
+
+  <p>Using audio tag</p>
+  <audio src="C:\Users\alexo\Downloads\Music\De La Salle Alma Mater Hymn Featuring De La Salle Philippines.mp3" controls></audio>
 
     <hr>
-
+<!--fieldset, input types/attributes, for, textarea, label, legend-->
+    <fieldset>
+    <h2>Form</h2>
     <form action="">
-      <fieldset>
+      <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+
+          <label>Email:</label>
+          <input type="email" id="email" name="email" placeholder="Email address" required><br><br>
+
+          <label>Password:</label>
+          <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+
+          <label>Age:</label>
+          <input type="number" name="number" id="number" placeholder="Number"><br><br>
+
+          <label for="gender">Gender:</label>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label><br><br>
+
+          <label for="comment">Tell me your experience in DLSU-D:</label><br>
+          <textarea id="comment" name="comment" rows="10" cols="40">Comment here</textarea><br><br>
+
+          <label for="Choose">Choose an application:</label>
+          
+          <!--select-->
+          <select name="apps" id="apps">
+          <option value="vsc">Visual Studio Code</option>
+          <option value="eclipse">Eclipse</option>
+          <option value="netbeans">Netbeans</option>
+          </select><br><br>
+
         <legend><b>Are you OK?</b></legend>
         <label><input id="yes" type="radio" name="yes-no" value="yes" checked>Yes</label>
-        <label><input id="no" type="radio" name="yes-no" value="no">No</label>
-        <button type="button">Button</button>
+        <label><input id="no" type="radio" name="yes-no" value="no">No</label><br><br>
+
+          <legend>Languages that you know</legend>
+
+          <label>
+            <input type="checkbox" name="python" value="python"> Python
+          </label>
+          <label>
+            <input type="checkbox" name="java" value="java"> Java
+          </label>
+          <label>
+            <input type="checkbox" name="C" value="C"> C
+          </label><br><br>
+
+        <input type="submit" value="Submit"><br>
       </fieldset>
     </form>
-    
   </body>
 </html>
